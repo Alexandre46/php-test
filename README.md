@@ -5,6 +5,7 @@
 * copy current env file (due to gitignore .env wasn't on repo): `cp .env.example .env`
 * Created laravel with Sail (Docker container already) to run just run: `./vendor/bin/sail up -d` (Running containers dettached in background) Check those containers running `docker ps | grep php-test` *
 * Open your browser to see this data: http://localhost:3010 (docker-compose port mapping 3010 to http service 80 - can change that port if you need another)
+* Click on center on link to see some info about shapes objects i've created to test.
 * Check about those goals, feedback is appreciated
 
  
@@ -13,7 +14,7 @@
 ![Screenshot 2021-09-12 at 22.32.31.png](:/73b3d48f5868481c95b9407839f0f440)
 
 
-How to check PHPUnit tests ?
+### How to check PHPUnit tests ###
 * inside project container just run: `php artisan test` or can be as `vendor/bin/phpunit`
 
 
