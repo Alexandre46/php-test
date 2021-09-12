@@ -12,12 +12,14 @@
  
  *Will see something similar to
 
-![Screenshot 2021-09-12 at 22.32.31.png](:/73b3d48f5868481c95b9407839f0f440)
+<img width="1437" alt="Screenshot 2021-09-13 at 00 33 18" src="https://user-images.githubusercontent.com/13085956/133006204-87a55e3b-1a3d-44c1-887d-8f0814d308a4.png">
+
 
 
 ### How to check PHPUnit tests ###
 * inside project container just run: `php artisan test` or can be as `vendor/bin/phpunit`
 
+<img width="698" alt="Screenshot 2021-09-13 at 00 32 48" src="https://user-images.githubusercontent.com/13085956/133006191-cdeb0cfb-6168-41dd-9cf0-480033c60a6c.png">
 
 ### Info about Stack used ###
 
