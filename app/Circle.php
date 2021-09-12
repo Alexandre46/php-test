@@ -19,7 +19,7 @@ class Circle extends Shape
         return (3.14) * (($this->radius) * 2);
     }
 
-    public function generateObject()
+    public function generateCircleObject()
     {
         $obj = new Circle(20,20,2);
         return [

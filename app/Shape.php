@@ -2,7 +2,6 @@
 
 namespace App;
 
-use Carbon\Carbon;
 use Illuminate\Support\Str;
 
 class Shape
@@ -22,7 +21,7 @@ class Shape
     {
         $this->width = $width;
         $this->height = $height;
-        $this->id = Str::uuid()->toString();
+        $this->id = Str::uuid()->toString(); //unique id
     }
 
     public function getId()
@@ -38,19 +37,29 @@ class Shape
 
     public function calculateArea()
     {
-        return ($this->width * $this->height);
+        $result = 0;
+        if ($this->width === $this->height) {
+            //means it's a square
+            //Area = 4*l
+            $result = 4 * ($this->width);
+        } else {
+            //means it's a rectangle
+            //Area = width * height
+            $result = ($this->width) * ($this->height);
+        }
+        return $result;
     }
 
     public function generateNewObject()
     {
-        $width = 10;
-        $height = 10;
+        $width = $this->width;
+        $height = $this->height;
 
         $object = new Shape($width, $height);
         $values = [
-            'objecto_id' => $object->getId(),
-            'objecto_width' => $width,
-            'objecto_height' => $height
+            'id' => $object->getId(),
+            'width' => $width,
+            'height' => $height
         ];
         return $values;
     }
