@@ -2,6 +2,8 @@
 
 namespace App;
 
+use Illuminate\Support\Str;
+
 class Circle extends Shape
 {
     const type = '3';
@@ -27,5 +29,18 @@ class Circle extends Shape
             'name' => $obj->name,
             'radius' => $obj->radius
         ];
+    }
+
+    public function generateId($type)
+    {
+        switch ($type) {
+            case $type == 'uuid':
+                $id = Str::uuid()->toString();
+                break;
+            default:
+                $id = time();
+                break;
+        }
+        return $id;
     }
 }

@@ -3,6 +3,7 @@
 * First download this php project doing just: `git clone git@github.com:Alexandre46/php-test.git`
 * Enter that project folder: `cd php-test`
 * copy current env file (due to gitignore .env wasn't on repo): `cp .env.example .env`
+* Install PHP dependencies with: `composer install`
 * Created laravel with Sail (Docker container already) to run just run: `./vendor/bin/sail up -d` (Running containers dettached in background) Check those containers running `docker ps | grep php-test` *
 * Open your browser to see this data: http://localhost:3010 (docker-compose port mapping 3010 to http service 80 - can change that port if you need another)
 * Click on center on link to see some info about shapes objects i've created to test.
